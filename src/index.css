@@ -2,134 +2,134 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Design System baseado na marca Senac. Todas as cores em HSL. */
 
 @layer base {
   :root {
+    /* Cores oficiais Senac */
+    --brand-blue: 208.51 100% 27.65%;            /* Azul Senac */
+    --brand-orange: 32.75 93.16% 54.12%;         /* Laranja Senac */
+    --brand-orange-light: 31.20 96.90% 74.71%;   /* Laranja Claro Senac */
+
     --background: 0 0% 98%;
-    --foreground: 210 12% 16%;
+    --foreground: 212 15% 16%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 12% 16%;
+    --card-foreground: 212 15% 16%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 12% 16%;
+    --popover-foreground: 212 15% 16%;
 
-    --primary: 214 84% 45%;
+    --primary: var(--brand-blue);
     --primary-foreground: 0 0% 98%;
 
     --secondary: 210 40% 95%;
-    --secondary-foreground: 210 12% 16%;
+    --secondary-foreground: 212 15% 16%;
 
     --muted: 210 40% 95%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 43 96% 56%;
-    --accent-foreground: 210 12% 16%;
+    --accent: var(--brand-orange);
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 214 84% 45%;
+    --border: 212 15% 90%;
+    --input: 212 15% 90%;
+    --ring: var(--brand-blue);
 
     --success: 142 76% 36%;
     --success-foreground: 0 0% 98%;
-    
+
     --warning: 38 92% 50%;
-    --warning-foreground: 210 12% 16%;
-    
+    --warning-foreground: 212 15% 16%;
+
     --info: 199 89% 48%;
     --info-foreground: 0 0% 98%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(214 84% 45%), hsl(199 89% 48%));
-    --gradient-accent: linear-gradient(135deg, hsl(43 96% 56%), hsl(214 84% 45%));
-    
-    --shadow-card: 0 4px 6px -1px hsl(210 12% 16% / 0.1), 0 2px 4px -1px hsl(210 12% 16% / 0.06);
-    --shadow-header: 0 1px 3px 0 hsl(210 12% 16% / 0.1), 0 1px 2px 0 hsl(210 12% 16% / 0.06);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--info)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary)));
+
+    --shadow-card: 0 4px 6px -1px hsl(var(--foreground) / 0.1), 0 2px 4px -1px hsl(var(--foreground) / 0.06);
+    --shadow-header: 0 1px 3px 0 hsl(var(--foreground) / 0.1), 0 1px 2px 0 hsl(var(--foreground) / 0.06);
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
+    --sidebar-primary: var(--brand-blue);
     --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
+    --sidebar-accent: var(--brand-orange);
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
+    --brand-blue: 208.51 100% 40%;
+    --brand-orange: 32.75 93% 56%;
+    --brand-orange-light: 31.2 96% 70%;
+
     --background: 210 12% 8%;
-    --foreground: 210 40% 98%;
+    --foreground: 0 0% 100%;
 
     --card: 210 12% 12%;
-    --card-foreground: 210 40% 98%;
+    --card-foreground: 0 0% 100%;
 
     --popover: 210 12% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 214 84% 55%;
+    --primary: var(--brand-blue);
     --primary-foreground: 210 12% 8%;
 
     --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 43 96% 56%;
+    --accent: var(--brand-orange);
     --accent-foreground: 210 12% 8%;
 
     --destructive: 0 62.8% 50.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 214 84% 55%;
+    --ring: var(--brand-blue);
 
     --success: 142 76% 46%;
     --success-foreground: 210 12% 8%;
-    
+
     --warning: 38 92% 60%;
     --warning-foreground: 210 12% 8%;
-    
+
     --info: 199 89% 58%;
     --info-foreground: 210 12% 8%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(214 84% 55%), hsl(199 89% 58%));
-    --gradient-accent: linear-gradient(135deg, hsl(43 96% 56%), hsl(214 84% 55%));
-    
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--info)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary)));
+
     --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
     --shadow-header: 0 1px 3px 0 hsl(0 0% 0% / 0.3), 0 1px 2px 0 hsl(0 0% 0% / 0.2);
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary: var(--brand-blue);
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-accent: var(--brand-orange);
+    --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Open Sans', sans-serif;
   }
 }
