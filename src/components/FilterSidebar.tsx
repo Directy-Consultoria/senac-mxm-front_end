@@ -106,7 +106,7 @@ const FilterSidebar = () => {
         </div>
 
         <div className="pt-4 space-y-2">
-          <Button className="w-full bg-gradient-primary">
+          <Button variant="primaryHoverAccent" className="w-full">
             Aplicar Filtros
           </Button>
           <Button variant="outline" className="w-full">

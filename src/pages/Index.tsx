@@ -120,7 +120,7 @@ const Index = () => {
                 className="pl-10 min-w-[300px]"
               />
             </div>
-            <Button className="bg-gradient-primary">
+            <Button variant="primaryHoverAccent">
               Nova Cotação
             </Button>
           </div>
