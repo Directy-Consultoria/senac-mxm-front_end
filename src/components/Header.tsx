@@ -19,7 +19,7 @@ const Header = () => {
 
             <nav className="hidden md:flex items-center space-x-6">
               <a
-                href="#"
+                href="/"
                 className="text-foreground hover:text-primary transition-colors font-medium"
               >
                 Início
@@ -41,6 +41,12 @@ const Header = () => {
                 className="text-foreground hover:text-primary transition-colors font-medium"
               >
                 Fornecedores
+              </a>
+              <a
+                href="/analise"
+                className="text-foreground hover:text-primary transition-colors font-medium"
+              >
+                Análise
               </a>
             </nav>
           </div>
