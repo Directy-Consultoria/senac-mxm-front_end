@@ -1,4 +1,5 @@
 import { Calendar, Clock, MapPin, FileText, Eye } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import StatusBadge from "./StatusBadge";
@@ -33,6 +34,7 @@ const CotacaoCard = ({
   unidade,
   objeto,
 }: CotacaoCardProps) => {
+  const navigate = useNavigate();
   return (
     <Card className="hover:shadow-card transition-all duration-200 border border-border">
       <CardHeader className="pb-3">
@@ -86,7 +88,12 @@ const CotacaoCard = ({
         )}
 
         <div className="flex gap-2 pt-2">
-          <Button variant="outline" size="sm" className="flex-1">
+          <Button
+            variant="outline"
+            size="sm"
+            className="flex-1"
+            onClick={() => navigate(`/cotacao/${id}`)}
+          >
             <Eye className="h-4 w-4 mr-2" />
             Ver Detalhes
           </Button>
