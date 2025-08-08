@@ -48,6 +48,12 @@ const Header = () => {
               >
                 Análise
               </a>
+              <a
+                href="/selecao"
+                className="text-foreground hover:text-primary transition-colors font-medium"
+              >
+                Envio de Cotação
+              </a>
             </nav>
           </div>
 
