@@ -52,7 +52,13 @@ const Header = () => {
                 href="/selecao"
                 className="text-foreground hover:text-primary transition-colors font-medium"
               >
-                Envio de Cotação
+                Mapa de Cotação
+              </a>
+              <a
+                href="/emitirPlanilhaCotacao"
+                className="text-foreground hover:text-primary transition-colors font-medium"
+              >
+                Emitir Planilha
               </a>
             </nav>
           </div>
